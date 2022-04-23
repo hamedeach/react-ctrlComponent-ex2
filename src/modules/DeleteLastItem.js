@@ -6,20 +6,21 @@ class DeleteLastItem extends Component {
     
     constructor(props){
         super(props)
-        this.itemsList = props.itemsList;
+      
         this.deleteevent =props.onDeleteItem;
+        this.noItemsFound = props.noItemsFound;
     }
 
     static propTypes = {
-        itemsList: propTypes.array.isRequired,
+        noItemsFound:propTypes.func.isRequired,
         onDeleteItem: propTypes.func.isRequired,
     }
 
   
 
-    noItemsFound = () => {
-        return this.itemsList.length === 0;
-    };
+ 
+
+   
 
 
 
